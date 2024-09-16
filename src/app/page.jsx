@@ -1,7 +1,10 @@
-import Image from "next/image";
+'use client'
 
+import Image from "next/image";
+import {motion} from 'framer-motion';
 const Homepage = () => {
   return(
+    <motion.div className="h-full" initial={{y:"-200vh"}} animate={{y:"0vh"}} transition={{duration:1}}>
     <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
       {/* Image Container */}
       <div className="h-1/2 lg:h-full lg:w-1/2 relative">
@@ -10,7 +13,7 @@ const Homepage = () => {
       {/* Text Container */}
       <div className="h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-8 items-center justify-center">
         {/* Title */}
-        <h1 className="text-2xl md:text-6xl font-bold">Nigga Nigga Nigga Nigga Nigga</h1>
+        <h1 className="text-2xl md:text-6xl font-bold">Welcome to the home page</h1>
         {/* Desc */}
         <p className="md:text-xl">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis deleniti aperiam mollitia quibusdam nulla odit alias ipsam, aliquam cumque repellat, excepturi eum totam, laboriosam velit consectetur soluta necessitatibus quae cupiditate!
@@ -22,6 +25,7 @@ const Homepage = () => {
         </div>
       </div>
     </div>
+    </motion.div>
   )
 };
 
