@@ -15,7 +15,7 @@ const about = () => {
   return (
     <motion.div className="h-full" initial={{ y: "-200vh" }} animate={{ y: "0vh" }} transition={{ duration: 1 }}>
       {/* Container */}
-      <div className='h-full bg-red-500 lg:flex overflow-scroll no-scrollbar' ref={containerRef}>
+      <div className='h-full bg-red-500 lg:flex' ref={containerRef}>
 
 
       {/* Text Container */}
