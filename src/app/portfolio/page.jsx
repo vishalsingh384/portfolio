@@ -40,7 +40,7 @@ const items = [
 ];
 
 
-const portfolio = () => {
+const PortfolioPage = () => {
   const ref = useRef();
   const { scrollYProgress } = useScroll({ target: ref });
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-80%"])
@@ -75,6 +75,6 @@ const portfolio = () => {
   )
 }
 
-export default portfolio
+export default PortfolioPage
 
 

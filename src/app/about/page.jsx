@@ -4,7 +4,7 @@ import { animate, easeIn, easeInOut, motion, useInView, useScroll } from 'framer
 import Image from 'next/image'
 import { useRef } from 'react'
 
-const about = () => {
+const AboutPage = () => {
 
   const containerRef = useRef();
   const ref=useRef();
@@ -153,4 +153,4 @@ const about = () => {
   )
 }
 
-export default about
+export default AboutPage

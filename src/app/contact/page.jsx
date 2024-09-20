@@ -4,7 +4,7 @@ import { useState, useRef } from 'react'
 import emailjs from '@emailjs/browser';
 
 
-const contact = () => {
+const ContactPage = () => {
   const text = "Hello World"
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
@@ -59,4 +59,4 @@ const contact = () => {
   )
 }
 
-export default contact
+export default ContactPage
