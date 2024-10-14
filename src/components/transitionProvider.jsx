@@ -10,7 +10,7 @@ const TransitionProvider = ({ children }) => {
   const pathName = usePathname();
   return (
     <AnimatePresence mode="wait">
-      <div key={pathName} className="w-screen h-screen bg-gradient-to-b from-blue-100 to-red-100">
+      <div key={pathName} className="w-screen min-h-screen bg-gradient-to-b from-blue-100 to-red-100">
         <motion.div
           className="h-screen w-screen fixed bg-black rounded-b-[100px] z-40"
           animate={{ height: "0vh" }}
@@ -34,7 +34,7 @@ const TransitionProvider = ({ children }) => {
         <div className="h-24">
           <Navbar />
         </div>
-        <div className="h-[calc(100vh-6rem)]">
+        <div className="flex-1">
           {children}
         </div>
       </div>
