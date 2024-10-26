@@ -1,10 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useContext, useState } from "react";
 import Navlink from "./navlink";
 import { motion } from "framer-motion";
-import { Volume, Volume2, VolumeOff } from "lucide-react";
+import { Volume2, VolumeOff } from "lucide-react";
+import { AudioContext } from "@/context/AudioContext";
+import { CoolModeCustom } from "./ui/cool";
 
 const links = [
   { url: "/", title: "Home" },
@@ -15,8 +17,9 @@ const links = [
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const audioRef=useRef(null);
+  // const [isPlaying, setIsPlaying] = useState(false);
+  // const audioRef=useRef(null);
+  const {isPlaying,toggleMusic}=useContext(AudioContext);
 
   const topVariants = {
     closed: {
@@ -71,16 +74,6 @@ const Navbar = () => {
     },
   };
 
-  const toggleMusic=()=>{
-    console.log(audioRef.current);
-    if(isPlaying){
-      audioRef.current.pause();
-      setIsPlaying(false);
-    }else{
-      audioRef.current.play();
-      setIsPlaying(true);
-    }
-  }
 
   return (
     <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
@@ -93,15 +86,7 @@ const Navbar = () => {
 
       {/* Logo */}
       <div className="md:hidden lg:flex lg:w-1/3 lg:justify-center">
-        <Link
-          href="/"
-          className="text-sm bg-black rounded-md p-1 font-semibold flex items-center justify-center"
-        >
-          <span className="text-white mr-1">Vishal</span>
-          <span className="w-12 h-8 bg-white text-black rounded flex items-center justify-center">
-            Singh
-          </span>
-        </Link>
+        <CoolModeCustom/>
       </div>
 
       {/* Social */}
@@ -121,9 +106,8 @@ const Navbar = () => {
         <Link href="/" className="w-10 h-10">
           <img src="/linkedin.png" />
         </Link>
-        <div onClick={toggleMusic}>
+        <div onClick={toggleMusic} className="cursor-pointer">
           {isPlaying ? <Volume2 /> : <VolumeOff />}
-          <audio ref={audioRef} src="./song.mp3"></audio>
         </div>
       </div>
 

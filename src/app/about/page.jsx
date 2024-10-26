@@ -7,7 +7,6 @@ import { useRef } from "react";
 const AboutPage = () => {
   const containerRef = useRef();
   const ref = useRef();
-  const isInView = useInView(ref, { margin: "-100px", once: "true" });
 
   return (
     <motion.div
@@ -17,34 +16,76 @@ const AboutPage = () => {
       transition={{ duration: 1 }}
     >
       {/* Container */}
-      <div className="h-full py-10" ref={containerRef}>
-        {/* Text Container */}
-        <div className="flex justify-between items-center h-full px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 gap-10">
-          {/* Biography Container */}
-          <div className="flex flex-col gap-20 w-1/2 h-full">
-            {/* Bio Title */}
-            <h1 className="font-bold text-2xl flex justify-center">KNOW ME</h1>
-            {/* Bio Desc */}
-            <div className="flex flex-col gap-5 pl-5 pr-5">
-              <About desc="Started Btech in 2017" timer={1} x="0px"/>
-              <About desc={"Started Mtech in 2021"} timer={1.2} x="95px"/>
-              <About
-                desc={"Worked and learend as a teching assisatant in 2022"}
-                timer={1.4} x="0px"
-              />
-              <About desc={"Joined Accenture in 2023"} timer={1.6} x="95px"/>
-              <About desc={"Loves playing football and cricket"} timer={1.8} x="0px"/>
-              <About desc={"Aspiring FullStack Developer"} timer={2} x="95px"/>
-            </div>
+      <div className="h-full" ref={containerRef}>
+        {/* Sub Container */}
+        <div className="flex flex-col justify-between items-center h-full px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 ">
+          <div className="p-5">
+            <span className="font-semibold text-slate-700 tracking-wide rounded-lg text-justify">
+            Hey! I’m a full-stack dev with a love for building smooth, engaging apps—especially in the MERN stack. Started as a Teaching Assistant at Pepcoding, learned a ton there, and now I’m diving even deeper as an Associate Software Engineer at Accenture. With an MTech in Computer Science and loads of hands-on coding, I’m all about solving real-world problems and working with fantastic teams to make digital experiences that actually click with people. Every project fuels my drive to innovate and keep leveling up. Let’s just say I’m here to build cool stuff and have fun doing it!
+            </span>
           </div>
-
-          {/* Skill Container */}
-          <div className="flex flex-col gap-12 w-1/2 items-center h-full">
-            {/* Skill Title */}
-            <h1 className="font-bold text-2xl">SKILLS</h1>
-            {/* SKill SVG */}
-            <div className="w-4/6">
-              <IconCloudDemo />
+          <div className="flex h-full w-full ">
+            {/* Work Container */}
+            <div className="flex flex-col flex-1">
+              {/* Bio Title */}
+              <h1 className="text-2xl py-2 flex justify-center ">EXPERIENCE</h1>
+              <div className="flex flex-col gap-8">
+                <div className="flex flex-col gap-3">
+                  <motion.h2
+                    initial={{ backgroundPosition: "0% 50%" }}
+                    animate={{ backgroundPosition: "100% 50%" }}
+                    transition={{
+                      duration: 3,
+                      ease: "easeInOut",
+                      repeat: Infinity,
+                      repeatType: "reverse",
+                    }}
+                    className="font-bold bg-gradient-to-r from-red-200 via-blue-200 to-green-200 rounded-xl py-3 pl-3 text-2xl bg-[length:200%_100%] text-slate-600"
+                  >
+                    Associate Software Engineer
+                  </motion.h2>
+                  <ul className="list-disc pl-10 flex flex-col gap-5 font-medium text-l">
+                    <li>
+                    Jumped in to help design and launch a client leadership portal that’s now rocking over 10,000 users—boosting user experience and efficiency by a cool 30%! Teaming up with some amazing senior folks, we whipped up a leadership messaging platform that cranked up stakeholder engagement by 20%.
+                    </li>
+                    <li>
+                    Got my hands dirty setting up a monthly newsletter system that made client communication way more fun, bumping open rates by 15%. Plus, I helped manage the passion clubs module, which got clients more involved and strengthened those all-important community vibes by 20%!
+                    </li>
+                  </ul>
+                </div>
+                <div className="flex flex-col gap-3">
+                <motion.h2
+                    initial={{ backgroundPosition: "0% 50%" }}
+                    animate={{ backgroundPosition: "100% 50%" }}
+                    transition={{
+                      duration: 3,
+                      ease: "easeInOut",
+                      repeat: Infinity,
+                      repeatType: "reverse",
+                    }}
+                    className="font-bold bg-gradient-to-r from-red-200 via-blue-200 to-green-200 rounded-xl py-3 pl-3 text-2xl bg-[length:200%_100%] text-slate-600"
+                  >
+                    Teaching Assistant in Programming in Java
+                  </motion.h2>
+                  <ul className="list-disc pl-10 flex flex-col gap-5 font-medium text-l">
+                    <li>
+                    Crafted over 40 fun and interactive Java programming lessons that boosted students’ understanding and retention by up to 30%. Watching them get excited about coding was the best part!
+                    </li>
+                    <li>
+                    Developed personalized teaching methods for more than 30 students, tailoring my approach to their unique learning styles. This hands-on strategy led to a solid 20% jump in their performance—talk about a win!
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            {/* Skill Container */}
+            {/* Skill Title */}{" "}
+            <div className="flex flex-col flex-1 w-1/2 items-center">
+              <h1 className="text-2xl py-2">SKILLS</h1>
+              {/* SKill SVG */}
+              <div className="w-4/6">
+                <IconCloudDemo />
+              </div>
             </div>
           </div>
         </div>

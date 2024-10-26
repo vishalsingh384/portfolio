@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { Download } from "lucide-react";
 const Homepage = () => {
   return (
     <motion.div
@@ -29,12 +30,10 @@ const Homepage = () => {
             soluta necessitatibus quae cupiditate!
           </p>
           {/* Buttons */}
-          <div className="w-full flex gap-4">
-            <button className="p-4 rounded ring-1 ring-black bg-black text-white">
-              View My Work
-            </button>
-            <button className="p-4 rounded ring-1 ring-black">
-              Contact Me
+          <div className="w-full">
+            <button className="p-4 rounded ring-1 ring-black bg-black text-white flex text-lg justify-center items-center gap-2 hover:shadow-[0px_0px_6px_2px_rgba(0,80,80,0.3),0px_0px_16px_4px_rgba(0,80,80,0.2)]">
+              Download CV
+              <a href="/VS.pdf" download><Download/></a>
             </button>
           </div>
         </div>

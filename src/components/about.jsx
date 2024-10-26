@@ -1,7 +1,6 @@
 import { easeIn, easeInOut, easeOut, motion } from 'framer-motion'
 
 const About = (props) => {
-    console.log(props);
   return (
     <motion.span
       initial={{ x: "-650px" }}
