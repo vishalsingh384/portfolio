@@ -24,8 +24,8 @@ export const cloudProps = {
     clickToFront: 500,
     tooltipDelay: 0,
     outlineColour: "#0000",
-    maxSpeed: 0.07,
-    minSpeed: 0.06,
+    maxSpeed: 0.03,
+    minSpeed: 0.02,
     // dragControl: false,
   },
 };

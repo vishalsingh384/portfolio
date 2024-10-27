@@ -14,7 +14,6 @@ const slugs = [
   "prisma",
   "amazonaws",
   "postgresql",
-  "vercel",
   "git",
   "visualstudiocode"
 ];

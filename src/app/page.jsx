@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Download } from "lucide-react";
+import Meteors from "@/components/ui/meteors";
 const Homepage = () => {
   return (
     <motion.div
@@ -11,6 +12,7 @@ const Homepage = () => {
       animate={{ y: "0vh" }}
       transition={{ duration: 1 }}
     >
+      <Meteors number={15}/>
       <div className="h-full flex gap-10 lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 ">
         {/* Image Container */}
         <div className="h-1/2 lg:h-full lg:w-1/2 relative">
@@ -20,14 +22,11 @@ const Homepage = () => {
         <div className="h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-8 items-center justify-center">
           {/* Title */}
           <h1 className="text-2xl md:text-6xl font-bold">
-            Welcome to the home page
+            Welcome to my portfolio
           </h1>
           {/* Desc */}
-          <p className="md:text-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-            deleniti aperiam mollitia quibusdam nulla odit alias ipsam, aliquam
-            cumque repellat, excepturi eum totam, laboriosam velit consectetur
-            soluta necessitatibus quae cupiditate!
+          <p className="md:text-xl text-justify">
+          I am Vishal! I’m a full-stack developer with a love for creating cool, efficient web experiences using the MERN stack. With a little over a year of experience, I’m currently diving into exciting projects at Accenture. Outside of coding, I’m a big sports fan, always up for a game or catching the latest match. Thanks for stopping by—take a look around!
           </p>
           {/* Buttons */}
           <div className="w-full">

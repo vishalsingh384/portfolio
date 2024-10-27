@@ -11,7 +11,7 @@ import { CoolModeCustom } from "./ui/cool";
 const links = [
   { url: "/", title: "Home" },
   { url: "/about", title: "About" },
-  { url: "/portfolio", title: "Portfolio" },
+  { url: "/portfolio", title: "Works" },
   { url: "/contact", title: "Contact" },
 ];
 
@@ -90,20 +90,11 @@ const Navbar = () => {
       </div>
 
       {/* Social */}
-      <div className="hidden md:flex gap-4 lg:w-1/3 lg:justify-center">
-        <Link href="/" className="w-10 h-10">
+      <div className="hidden md:flex gap-8 lg:w-1/3 lg:justify-center items-center">
+        <Link href="https://github.com/vishalsingh384" target="_blank" className="w-10 h-10">
           <img src="/github.png" />
         </Link>
-        <Link href="/" className="w-10 h-10">
-          <img src="/facebook.png" />
-        </Link>
-        <Link href="/" className="w-10 h-10">
-          <img src="/instagram.png" />
-        </Link>
-        <Link href="/" className="w-10 h-10">
-          <img src="/pinterest.png" />
-        </Link>
-        <Link href="/" className="w-10 h-10">
+        <Link href="https://www.linkedin.com/in/vishalsing384/" target="_blank" className="w-10 h-10">
           <img src="/linkedin.png" />
         </Link>
         <div onClick={toggleMusic} className="cursor-pointer">
